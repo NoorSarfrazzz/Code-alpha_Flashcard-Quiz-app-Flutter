@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flashcard_quiz/quiz.dart';
+import 'package:flashcard_quiz/quiz_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flip_card/flip_card.dart';
@@ -144,7 +144,7 @@ class _LearningscreenState extends State<Learningscreen> {
               ),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => QuizScreen()));
+                      MaterialPageRoute(builder: (context) => QuizScreen(category: widget.category,)));
                 },
                 child: Text(
                   'Take Quiz',

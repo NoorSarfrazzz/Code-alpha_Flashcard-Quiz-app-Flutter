@@ -1,8 +1,7 @@
 import 'dart:ui';
-import 'package:flashcard_quiz/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-
+import 'package:flashcard_quiz/quiz_screen.dart';
 import 'LearningScreen.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -139,8 +138,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => QuizScreen(
-                                          ),
+                                          builder: (context) => QuizScreen(category: Categories[index],),
                                         ),
                                       );
                                     },
